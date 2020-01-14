@@ -77,7 +77,7 @@ docker run -v /var/pypi/packages:/data/packages -p 8080:8080 -d pypiserver/pypis
 
 to run it in the background.
 
-## 4. USAGE
+## 4. Usage
 
 ```
 pip install -i http://<server_ip>:8080 [packages]
@@ -94,3 +94,7 @@ timeout = 300
 ```
 
 and save. The use pip as you would on an internet machine.
+
+## 5. Adding packages afterwards
+
+You can simply `pip download -r requirements.txt` and directly copy the resulting files into your server's `/var/pypi/packages` directory.
